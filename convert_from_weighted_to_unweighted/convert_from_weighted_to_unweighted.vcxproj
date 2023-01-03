@@ -144,11 +144,15 @@
   <ItemGroup>
     <Text Include="Cities.txt" />
     <Text Include="graph.txt" />
+    <Text Include="Haggle.txt" />
+    <Text Include="Hypertext 2009.txt" />
+    <Text Include="Infectious.txt" />
     <Text Include="league-be1-2016.txt" />
     <Text Include="moreno_beach.txt" />
     <Text Include="moreno_bison.txt" />
     <Text Include="moreno_cattle.txt" />
     <Text Include="moreno_hens.txt" />
+    <Text Include="moreno_mac.txt" />
     <Text Include="moreno_sampson.txt" />
     <Text Include="moreno_seventh.txt" />
     <Text Include="moreno_sheep.txt" />

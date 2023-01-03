@@ -1,4 +1,4 @@
-//有向重み付きグラフから無向重み付きグラフに変換して, ついでに枝の重複もなくして, txtファイルに出力するプログラム
+//有向重み付きタイムスタンプありグラフから無向重み無しタイムスタンプ無しグラフに変換して, ついでに枝の重複もなくして, txtファイルに出力するプログラム
 #include<iostream>
 #include<vector>
 #include<set>
@@ -13,7 +13,7 @@ int main() {
 	vector<set<long long int>> G;//出力したいグラフ
 
 	//入力開始.
-	ifstream ifs1("moreno_hens.txt");
+	ifstream ifs1("Infectious.txt");
 
 	if (!ifs1) {
 		std::cout << "Errer!";
@@ -36,12 +36,12 @@ int main() {
 			m = stoll(s);
 			count++;
 		}
-		else if (count > 1&& count<2+3*m && count % 3 == 2) {//グラフの枝の端点
+		else if (count > 1 && count % 4 == 2) {//グラフの枝の端点
 			x = stoll(s);
 			x--;
 			count++;
 		}
-		else if (count > 1 &&count<2+3*m&& count % 3 == 0) {//グラフの枝のもう一つの端点
+		else if (count > 1 && count % 4 == 3) {//グラフの枝のもう一つの端点
 			y = stoll(s);
 			y--;
 			count++;
@@ -52,7 +52,7 @@ int main() {
 				G[y].insert(x);
 			}
 		}
-		else if (count > 1 &&count<2+3*m &&count % 3 == 1) {//重み部分飛ばす
+		else if (count > 1 &&(count % 4 == 1 || count % 4 == 0)) {//重み部分,タイムスタンプ飛ばす
 			count++;
 		}
 	}

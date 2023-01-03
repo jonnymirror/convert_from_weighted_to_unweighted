@@ -31,5 +31,9 @@
     <Text Include="moreno_beach.txt" />
     <Text Include="moreno_seventh.txt" />
     <Text Include="moreno_hens.txt" />
+    <Text Include="moreno_mac.txt" />
+    <Text Include="Infectious.txt" />
+    <Text Include="Hypertext 2009.txt" />
+    <Text Include="Haggle.txt" />
   </ItemGroup>
 </Project>
